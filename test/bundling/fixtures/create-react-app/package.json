@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "yarn cross-env DISABLE_ESLINT_PLUGIN=true SKIP_PREFLIGHT_CHECK=true react-scripts build && concurrently --success first --kill-others \"yarn server\" \"node testCreateReactAppIntegration\"",
+    "start": "node init && yarn cross-env DISABLE_ESLINT_PLUGIN=true SKIP_PREFLIGHT_CHECK=true react-scripts build && concurrently --success first --kill-others \"yarn server\" \"node testCreateReactAppIntegration\"",
     "server": "serve -s build"
   },
   "dependencies": {

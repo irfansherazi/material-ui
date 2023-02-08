@@ -23,6 +23,6 @@
   },
   "files": [],
   "scripts": {
-    "build": "node scripts/build"
+    "build": "node init && node scripts/build"
   }
 }

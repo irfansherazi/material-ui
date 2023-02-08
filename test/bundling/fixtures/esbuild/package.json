@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build && concurrently --success first --kill-others \"yarn server\" \"node testEsbuildIntegration\"",
-    "build": "esbuild esbuild.fixture.js --bundle --outfile=build/esbuild.fixture.js",
+    "start": "node init && yarn build && concurrently --success first --kill-others \"yarn server\" \"node testEsbuildIntegration\"",
+    "build": "node init && esbuild esbuild.fixture.js --bundle --outfile=build/esbuild.fixture.js",
     "server": "serve -s build"
   },
   "dependencies": {

@@ -3,10 +3,10 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "node init && remix build",
+    "dev": "node init && remix dev",
     "postinstall": "remix setup node",
-    "start": "remix-serve build"
+    "start": "node init && remix-serve build"
   },
   "dependencies": {
     "@emotion/cache": "latest",
