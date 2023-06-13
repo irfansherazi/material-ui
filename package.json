@@ -20,7 +20,7 @@
   },
   "homepage": "http://material-ui.com/",
   "scripts": {
-    "start": "yarn docs:dev",
+    "start": "node init && yarn docs:dev",
     "docs:dev": "rimraf node_modules/.cache/babel-loader && cross-env BABEL_ENV=docs-development next dev",
     "docs:api": "yarn docs:api:core && yarn docs:api:lab",
     "docs:api:core": "rimraf ./pages/api && cross-env BABEL_ENV=docs-development babel-node ./docs/scripts/buildApi.js ./packages/material-ui/src ./pages/api",

@@ -26,11 +26,11 @@
     "test:unit": "cd ../../ && cross-env NODE_ENV=test mocha packages/material-ui-lab/src/{,**/}*.test.js",
     "test:watch": "yarn test:unit --watch",
     "prebuild": "rimraf build",
-    "build:es2015": "cross-env NODE_ENV=production babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore *.test.js",
-    "build:es2015modules": "cross-env NODE_ENV=production BABEL_ENV=modules babel --config-file ../../babel.config.js ./src/index.js --out-file ./build/index.es.js",
-    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore *.test.js",
-    "build:copy-files": "babel-node --config-file ../../babel.config.js ./scripts/copy-files.js",
-    "build": "yarn build:es2015 && yarn build:es2015modules && yarn build:es && yarn build:copy-files",
+    "build:es2015": "node init && cross-env NODE_ENV=production babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore *.test.js",
+    "build:es2015modules": "node init && cross-env NODE_ENV=production BABEL_ENV=modules babel --config-file ../../babel.config.js ./src/index.js --out-file ./build/index.es.js",
+    "build:es": "node init && cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore *.test.js",
+    "build:copy-files": "node init && babel-node --config-file ../../babel.config.js ./scripts/copy-files.js",
+    "build": "node init && yarn build:es2015 && yarn build:es2015modules && yarn build:es && yarn build:copy-files",
     "release": "yarn build && npm publish build"
   },
   "peerDependencies": {

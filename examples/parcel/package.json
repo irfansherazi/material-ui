@@ -13,7 +13,7 @@
     "react-dom": "latest"
   },
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "start": "node init && parcel src/index.html",
+    "build": "node init && parcel build src/index.html --public-url ./"
   }
 }
