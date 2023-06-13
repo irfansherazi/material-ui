@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "test": "babel-node test.js",
-    "build": "rimraf transforms && babel ./modules --out-dir ./transforms",
+    "build": "node init && rimraf transforms && babel ./modules --out-dir ./transforms",
     "prepublish": "npm run build"
   },
   "repository": {
