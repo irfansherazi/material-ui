@@ -12,9 +12,9 @@
     "react-dom": "next"
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node init && next",
+    "build": "node init && next build",
+    "start": "node init && next start"
   },
   "devDependencies": {
     "@types/next": "^7.0.5",

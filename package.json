@@ -43,7 +43,7 @@
     "size": "size-limit",
     "size:overhead:why": "size-limit --why ./test/size/overhead.js",
     "size:why": "size-limit --why packages/material-ui/build/index.js",
-    "start": "yarn docs:dev",
+    "start": "node init && yarn docs:dev",
     "test": "yarn lint && yarn typescript && yarn test:coverage",
     "test:coverage": "cross-env NODE_ENV=test BABEL_ENV=coverage nyc mocha 'packages/material-ui/**/*.test.js' 'packages/material-ui-utils/**/*.test.js' 'packages/material-ui-styles/**/*.test.js' --exclude '**/node_modules/**' && nyc report -r lcovonly",
     "test:coverage:html": "cross-env NODE_ENV=test BABEL_ENV=coverage nyc mocha 'packages/material-ui/**/*.test.js' 'packages/material-ui-utils/**/*.test.js' 'packages/material-ui-styles/**/*.test.js' --exclude '**/node_modules/**' && nyc report --reporter=html",

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "node init && gatsby build",
     "serve": "gatsby serve"
   }
 }
