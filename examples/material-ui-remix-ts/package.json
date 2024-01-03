@@ -3,9 +3,9 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev --manual",
-    "start": "remix-serve ./build/index.js",
+    "build": "node init && remix build",
+    "dev": "node init && remix dev --manual",
+    "start": "node init && remix-serve ./build/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
