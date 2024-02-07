@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rimraf build",
     "watch": "tsup --watch",
-    "build": "tsup",
+    "build": "node init && tsup",
     "typecheck": "tsc --noEmit -p ."
   },
   "dependencies": {

