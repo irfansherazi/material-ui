@@ -57,8 +57,8 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "node init && node scripts/start.js",
+    "build": "node init && node scripts/build.js",
     "test": "node scripts/test.js",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
