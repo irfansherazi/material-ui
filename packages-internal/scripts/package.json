@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf ./build",
-    "build": "tsc --build tsconfig.json",
+    "build": "node init && tsc --build tsconfig.json",
     "release:publish": "pnpm build && pnpm publish --tag latest",
     "release:publish:dry-run": "pnpm build && pnpm publish --tag latest --registry=\"http://localhost:4873/\"",
     "test": "cd ../../ && cross-env NODE_ENV=test mocha --config packages-internal/scripts/typescript-to-proptypes/test/.mocharc.js 'packages-internal/scripts/typescript-to-proptypes/**/*.test.ts'",
