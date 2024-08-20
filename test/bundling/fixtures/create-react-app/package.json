@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm cross-env DISABLE_ESLINT_PLUGIN=true SKIP_PREFLIGHT_CHECK=true react-scripts build && concurrently --success first --kill-others \"pnpm server\" \"node testCreateReactAppIntegration\"",
+    "start": "node init && pnpm cross-env DISABLE_ESLINT_PLUGIN=true SKIP_PREFLIGHT_CHECK=true react-scripts build && concurrently --success first --kill-others \"pnpm server\" \"node testCreateReactAppIntegration\"",
     "server": "serve -p 5001 -s build"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "react-is": "18.2.0"
   },
   "devDependencies": {
-    "concurrently": "7.4.0",
+    "concurrently": "8.2.2",
     "cross-env": "7.0.3",
     "playwright": "1.46.1",
     "serve": "14.0.1"

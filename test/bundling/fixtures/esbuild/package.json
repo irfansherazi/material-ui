@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm build && concurrently --success first --kill-others \"pnpm server\" \"node testEsbuildIntegration\"",
-    "build": "esbuild esbuild.fixture.js --bundle --outfile=build/esbuild.fixture.js",
+    "start": "node init && pnpm build && concurrently --success first --kill-others \"pnpm server\" \"node testEsbuildIntegration\"",
+    "build": "node init && esbuild esbuild.fixture.js --bundle --outfile=build/esbuild.fixture.js",
     "server": "serve -p 5001 -s build"
   },
   "dependencies": {
@@ -24,7 +24,7 @@
     "react-is": "18.2.0"
   },
   "devDependencies": {
-    "concurrently": "7.4.0",
+    "concurrently": "8.2.2",
     "playwright": "1.46.1",
     "serve": "14.0.1"
   }
