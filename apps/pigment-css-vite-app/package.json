@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "preview": "vite preview",
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "node init && vite",
+    "build": "node init && vite build"
   },
   "dependencies": {
     "@pigment-css/react": "file:../../packages/pigment-css-react",
