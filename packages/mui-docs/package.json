@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/mui/material-ui/tree/master/packages/mui-docs",
   "scripts": {
-    "build": "pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
-    "build:modern": "echo 'Skip modern build'",
-    "build:node": "node ../../scripts/build.mjs node",
-    "build:stable": "node ../../scripts/build.mjs stable",
-    "build:types": "node ../../scripts/buildTypes.mjs",
-    "build:copy-files": "node ../../scripts/copyFiles.mjs ./src/translations/translations.json:./translations/translations.json ./src/translations/translations.json:./node/translations/translations.json",
+    "build": "node init && pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
+    "build:modern": "node init && echo 'Skip modern build'",
+    "build:node": "node init && node ../../scripts/build.mjs node",
+    "build:stable": "node init && node ../../scripts/build.mjs stable",
+    "build:types": "node init && node ../../scripts/buildTypes.mjs",
+    "build:copy-files": "node init && node ../../scripts/copyFiles.mjs ./src/translations/translations.json:./translations/translations.json ./src/translations/translations.json:./node/translations/translations.json",
     "prebuild": "rimraf build",
     "release": "pnpm build && pnpm publish",
     "test": "exit 0"
@@ -57,7 +57,7 @@
     "@mui/material": "^5.0.0 || ^6.0.0",
     "@mui/system": "^5.0.0 || ^6.0.0",
     "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "chai": "^4.4.1",
+    "chai": "^4.4.1 || ^5.0.0",
     "csstype": "^3.1.3",
     "next": "^13.5.1 || ^14",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0"

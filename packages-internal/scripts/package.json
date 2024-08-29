@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf ./build",
-    "build": "tsc --build tsconfig.json",
+    "build": "node init && tsc --build tsconfig.json",
     "release:publish": "pnpm build && pnpm publish --tag latest",
     "release:publish:dry-run": "pnpm build && pnpm publish --tag latest --registry=\"http://localhost:4873/\"",
     "test": "cd ../../ && cross-env NODE_ENV=test mocha --config packages-internal/scripts/typescript-to-proptypes/test/.mocharc.js 'packages-internal/scripts/typescript-to-proptypes/**/*.test.ts'",
@@ -45,7 +45,7 @@
     "@types/node": "^18.19.46",
     "@types/react": "^18.3.4",
     "@types/uuid": "^9.0.8",
-    "chai": "^4.5.0",
+    "chai": "^5.1.1",
     "fast-glob": "^3.3.2",
     "prettier": "^3.3.3",
     "rimraf": "^5.0.10"
