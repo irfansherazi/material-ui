@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm vite build && concurrently --success first --kill-others \"pnpm server\" \"node testViteIntegration\"",
+    "start": "node init && pnpm vite build && concurrently --success first --kill-others \"pnpm server\" \"node testViteIntegration\"",
     "server": "serve -p 5001 -s build"
   },
   "dependencies": {
