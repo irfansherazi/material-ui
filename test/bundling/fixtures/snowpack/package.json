@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm snowpack build && concurrently --success first --kill-others \"pnpm server\" \"node testSnowpackIntegration\"",
+    "start": "node init && pnpm snowpack build && concurrently --success first --kill-others \"pnpm server\" \"node testSnowpackIntegration\"",
     "server": "serve -p 5001 -s build"
   },
   "dependencies": {
